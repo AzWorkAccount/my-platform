@@ -1,7 +1,30 @@
 import './App.css'
 
+type ReportKind = 'bug' | 'feature'
+
+type Report = {
+  id: string
+  text: string
+  kind: ReportKind
+}
+
+
+
+
 function App() {
+
+  const sampleReport: Report = {
+  id: '1',
+  text: 'Navigation link is broken',
+  kind: 'bug',
+
+}
+
   return (
+
+    
+
+    
     <main className="page-shell">
       <header className="site-header">
         <a className="wordmark" href="#home" aria-label="Aidan Zacherl home">
@@ -9,6 +32,11 @@ function App() {
         </a>
         <p className="header-note">Personal page</p>
       </header>
+
+      <section className="report-board">
+     <h2>Bugs & Feature Requests</h2>
+      <p>{sampleReport.text} ({sampleReport.kind})</p>
+      </section>
 
       <section className="intro" id="home" aria-labelledby="intro-title">
         <div className="intro-copy">
